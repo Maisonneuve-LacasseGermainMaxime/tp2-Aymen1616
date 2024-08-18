@@ -1,0 +1,40 @@
+.exercice {
+    display: flex;
+    gap: var(--space-l);
+    background-color: color-mix(in oklab, var(--coul-accent-pale) 20%, white 80%);
+    padding: var(--space-m) var(--space-l);
+    border-radius: 15px;
+    align-items: baseline;
+
+    & > * {
+        font-family: var(--font-accent);
+        font-size: var(--font-m);
+        color: var(--coul-accent-fonce);
+    }
+    & .btn {
+        font-weight: 300;
+        background-color: var(--coul-accent-fonce);
+        color: var(--coul-blanc);
+        padding: var(--space-s) var(--space-m);
+        border-radius: 5px;
+        border: var(--coul-accent-moyen);
+        cursor: pointer;
+    }
+}
+
+[data-liste-exercices] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+[data-exercice-infos] h3 {
+    color: var(--coul-principale-moyen-bleu);
+    font-weight: 700;
+    font-size: var(--font-xl);
+}
+
+[data-exercice-infos] p {
+    color: var(--coul-principale-moyen-bleu);
+    font-size: var(--font-l);
+}

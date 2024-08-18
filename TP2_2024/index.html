@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <script type="module" src="assets/js/pages/index.js"></script>
+        <title>Training App</title>
+    </head>
+
+    <body data-equipe>
+        <!-- Template pour l'utilisation des modales, ne pas supprimer-->
+        <template id="toast-modale">
+            <div class="toast-modale">
+                <div class="toast-modale-content">
+                    <p class="toast-message">{{message}}</p>
+                </div>
+            </div>
+        </template>
+
+        <header>
+            <h1>Suivi d'exercices</h1>
+            <nav>
+                <a href="#afficher">Afficher les exercices</a>
+                <a href="#ajouter">Ajouter un nouvel exercice</a>
+            </nav>
+        </header>
+        <main data-app>
+            <section data-panneau="liste">
+                <h2>Liste des exercices</h2>
+                <template id="exercice">
+                    <div class="exercice">
+                        <h2 data-exercice-date>{{date}}</h2>
+                        <p data-exercice-type>{{type}}</p>
+                        <a href="#detail/{{id}}" class="btn">Détail</a>
+                    </div>
+                </template>
+                <div data-liste-exercices></div>
+            </section>
+
+            <section data-panneau="detail">
+                <h2>Détail d'un exercice</h2>
+                <div data-exercice-infos>
+                    <h3 data-type>{{ type }}</h3>
+                    <p>Durée: <span data-duree>{{ duree }}</span> minutes</p>
+                    <p>Date: <span data-date>{{ date }}</span></p>
+                    <p>Description: <span data-description>{{ description }}</span></p>
+                    <p>Difficulté: <span data-difficulte>{{ difficulte }}</span></p>
+                    <a href="/#afficher" style="margin-right: 10px">Retour à la liste</a>
+                    <button class="btn danger">Supprimer l'exercice</button>
+                </div>
+            </section>
+
+            <section data-panneau="formulaire">
+                <h2>Ajouter un exercice</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label for="type">Type</label>
+                        <input type="text" name="type" id="type" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="date">Date</label>
+                        <input type="datetime-local" name="date" id="date" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="duree">Durée</label>
+                        <input type="number" min="0" name="duree" id="duree" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" required></textarea>
+                    </div>
+
+                    <input class="disabled" type="submit" name="submit" id="submit" value="envoyer" required />
+                </form>
+            </section>
+        </main>
+        <footer>Tous droits réservés &copy;2024</footer>
+    </body>
+</html>

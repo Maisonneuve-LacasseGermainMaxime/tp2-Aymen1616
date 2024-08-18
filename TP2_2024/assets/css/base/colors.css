@@ -1,0 +1,13 @@
+:root {
+    --coul-noir: #191919;
+    --coul-blanc: #fff;
+    --coul-principale-fonce: #243544;
+    --coul-principale-moyen-bleu: #47677c;
+    --coul-principale-pale-bleu: #6ba3b2;
+    --coul-principale-moyen-vert: #77acab;
+    --coul-principale-pale-vert: #afdcdc;
+
+    --coul-accent-fonce: #cb5f00;
+    --coul-accent-moyen: #cf734b;
+    --coul-accent-pale: #efb68d;
+}
