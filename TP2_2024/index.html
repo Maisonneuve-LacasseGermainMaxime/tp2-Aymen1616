@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="assets/css/styles.css" />
-        <script type="module" src="assets/js/pages/index.js"></script>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <script  src="/assets/js/pages/index.js" type="module"></script>
         <title>Training App</title>
     </head>
 
@@ -22,18 +22,18 @@
         <header>
             <h1>Suivi d'exercices</h1>
             <nav>
-                <a href="#afficher">Afficher les exercices</a>
-                <a href="#ajouter">Ajouter un nouvel exercice</a>
+                <a href="/afficher">Afficher les exercices</a>
+                <a href="/ajouter">Ajouter un nouvel exercice</a>
             </nav>
         </header>
         <main data-app>
             <section data-panneau="liste">
                 <h2>Liste des exercices</h2>
                 <template id="exercice">
-                    <div class="exercice">
+                    <div class="exercice" id="">
                         <h2 data-exercice-date>{{date}}</h2>
                         <p data-exercice-type>{{type}}</p>
-                        <a href="#detail/{{id}}" class="btn">Détail</a>
+                        <a href="/detail/{{id}}" class="btn">Détail</a>
                     </div>
                 </template>
                 <div data-liste-exercices></div>
@@ -41,13 +41,13 @@
 
             <section data-panneau="detail">
                 <h2>Détail d'un exercice</h2>
-                <div data-exercice-infos>
+                <div data-exercice-infos id="">
                     <h3 data-type>{{ type }}</h3>
                     <p>Durée: <span data-duree>{{ duree }}</span> minutes</p>
                     <p>Date: <span data-date>{{ date }}</span></p>
                     <p>Description: <span data-description>{{ description }}</span></p>
                     <p>Difficulté: <span data-difficulte>{{ difficulte }}</span></p>
-                    <a href="/#afficher" style="margin-right: 10px">Retour à la liste</a>
+                    <a href="/afficher" style="margin-right: 10px">Retour à la liste</a>
                     <button class="btn danger">Supprimer l'exercice</button>
                 </div>
             </section>
