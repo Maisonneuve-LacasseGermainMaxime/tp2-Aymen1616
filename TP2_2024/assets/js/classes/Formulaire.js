@@ -24,10 +24,6 @@ class Formulaire {
             // Active le bouton de soumission si le formulaire est valide
             this.submitButton.classList.remove("disabled");
             this.submitButton.disabled = false;
-        } else {
-            // Désactive le bouton de soumission si le formulaire est invalide
-            this.submitButton.classList.add("disabled");
-            this.submitButton.disabled = true;
         }
     }
 
