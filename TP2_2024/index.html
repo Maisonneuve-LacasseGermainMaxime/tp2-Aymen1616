@@ -7,6 +7,13 @@
         <link rel="stylesheet" href="/assets/css/styles.css" />
         <script  src="/assets/js/pages/index.js" type="module"></script>
         <title>Training App</title>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
     </head>
 
     <body data-equipe>
@@ -24,6 +31,10 @@
             <nav>
                 <a href="/afficher">Afficher les exercices</a>
                 <a href="/ajouter">Ajouter un nouvel exercice</a>
+            </nav>
+            <nav data-action="dark-mode">
+                <span class="btn fa fa-moon" data-mode="dark"></span>
+                <span class="btn fa fa-sun" data-mode="light"></span>
             </nav>
         </header>
         <main data-app>
@@ -48,7 +59,7 @@
                     <p>Description: <span data-description>{{ description }}</span></p>
                     <p>Difficulté: <span data-difficulte>{{ difficulte }}</span></p>
                     <a href="/afficher" style="margin-right: 10px">Retour à la liste</a>
-                    <button class="btn danger">Supprimer l'exercice</button>
+                    <button id="supprimer" class="btn danger" data-id="{{ id }}">Supprimer l'exercice</button>
                 </div>
             </section>
 
@@ -74,6 +85,12 @@
                         <label for="description">Description</label>
                         <textarea name="description" id="description" required></textarea>
                     </div>
+
+                    <div class="input-group">
+                        <label for="difficulte">Difficulté</label>
+                        <input type="number" min="1" max="5" name="difficulte" id="difficulte" required />
+                    </div>.
+
 
                     <input class="disabled" type="submit" name="submit" id="submit" value="envoyer" required />
                 </form>

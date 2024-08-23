@@ -39,7 +39,7 @@ class Router {
             evenement.preventDefault();
             const url = elementClique.href;
             history.pushState({}, "", url);
-
+            this.app.checkMode();
             this.miseAJourURL();
         }
     }

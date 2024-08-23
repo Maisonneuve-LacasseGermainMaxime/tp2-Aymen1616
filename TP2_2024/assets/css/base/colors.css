@@ -11,3 +11,10 @@
     --coul-accent-moyen: #cf734b;
     --coul-accent-pale: #efb68d;
 }
+
+body[data-mode="dark"] {
+    --coul-principale-fonce: hotpink;
+    --coul-blanc: #333;
+    --coul-noir: #fff;
+    background-color: black;
+}
